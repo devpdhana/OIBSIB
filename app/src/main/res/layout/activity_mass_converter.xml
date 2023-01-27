@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mass_Converter">
+
+    <TextView
+        android:id="@+id/txtHint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mass_converter_text"
+        android:textSize="28sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtGram"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHint"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gram"
+        android:textColor="@color/black"
+        android:textSize="28sp"/>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/edtGram"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:boxBackgroundColor="@color/white"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtGram"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+        <EditText
+            android:id="@+id/edtGram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_gram_value"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtGram"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <TextView
+        android:id="@+id/txtkilogram"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtGram"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kilo_gram"
+        android:textColor="@color/black"
+        android:textSize="28sp"/>
+
+    <TextView
+        android:id="@+id/valueKiliGram"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtkilogram"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0_00"
+        android:textSize="28sp"
+        android:textColor="@color/dark_green"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnMass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/valueKiliGram"
+        android:text="@string/convert"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
